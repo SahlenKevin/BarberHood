@@ -1,5 +1,4 @@
 
-
 h3{
     text-align: center;
 }
@@ -8,21 +7,24 @@ p{
     text-align: center;
 }
 
-.banner{
+.test{
+    text-align: center;
+}
+/* .banner{
     display: flex;
     margin: 0;
     height: 250px;
     flex-direction: row;
     justify-content: space-between;
     
-}
+} */
 
 .bannerimg{
     border-radius: 5%;
 }
 .navbar-nav{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .loggo{
