@@ -11,12 +11,14 @@ for (let index = 0; index < addToCartBtn.length; index++) {
     })
 }
 
-function addRemoveBtns()
+function addRemoveBtn()
 {
     for (let index = 0; index < removeItemFromCartBtn.length; index++) {
         let button = removeItemFromCartBtn[index];
         button.addEventListener("click", function(event){
             let buttonClicked = event.target
+            console.log("Remove loop");
+            console.log(buttonClicked);
             buttonClicked.parentElement.remove()
         })
         
@@ -33,6 +35,6 @@ function addItemToCart(){
     addCartItem.innerText="Prutt";
     addCartItem.appendChild(removeButton);
     shoppingcart.appendChild(addCartItem);
-
-    addRemoveBtns.call();
+    
+    addRemoveBtn.call();
 }
