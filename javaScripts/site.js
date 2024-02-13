@@ -1,6 +1,7 @@
 const shoppingCart = document.getElementById("shopping-cart-list");
 const addToCartBtn = document.getElementsByClassName("btn-success");
 const serviceList = document.getElementsByClassName("service-list")[0];
+let totalPrice = 0;
 console.log(addToCartBtn);
 
 const services = [
@@ -69,10 +70,11 @@ function displayServices()
 
         serviceList.appendChild(card);
     }
+    updateTotalPrice();
 }
 
+
 function addServiceToCart(service) {
-    // Add the service object to the shopping cart
     const addCartItem = document.createElement("li");
     addCartItem.classList.add("list-group-item");
 
@@ -83,29 +85,32 @@ function addServiceToCart(service) {
     const priceInfo= document.createElement("p");
     priceInfo.innerText=`Pris: ${service.Price}:-`;
     addCartItem.appendChild(priceInfo);
-    // addCartItem.innerText = `Tjänst: ${service.Title}, Pris: ${service.Price}:-`;
 
     const removeButton = document.createElement("btn");
     removeButton.classList.add("btn", "btn-danger")
     removeButton.innerText="Ta bort tjänst";
     removeButton.addEventListener("click", function (){
-        removeServiceFromCart(addCartItem);
+        removeServiceFromCart(addCartItem, service.Price);
     })
     addCartItem.appendChild(removeButton);
     
     addCartItem.classList.add("list-group-item");
     shoppingCart.appendChild(addCartItem);
+    totalPrice+=service.Price;
+
+    updateTotalPrice();
 }
 
-function removeServiceFromCart(CartItem) {
+function updateTotalPrice(){
+    const displayTotalPrice = document.getElementById("totalPrice");
+    displayTotalPrice.innerText=`Totalt: ${totalPrice}:-`; 
+}
+
+function removeServiceFromCart(CartItem, price) {
+    totalPrice-=price
+    updateTotalPrice();
     CartItem.remove();
 }
 
-
-const book = {
-  Title: "Titel",
-  Author: "Författare",
-  Year: 1990,
-};
 
 

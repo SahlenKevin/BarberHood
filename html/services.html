@@ -42,9 +42,19 @@
     <main class="contrainer mt-5">
       <div class="row">
         <div class="service-list col-sm-6 mb-3 mb-sm-0"></div>
-        <section class="col-md-2 shoppingCart">
-          <h1 class="all-text-color barberHood-title">Cart</h1>
-          <ul id="shopping-cart-list" class="list-group"></ul>
+        <section class="col-md-2 shoppingCart card container">
+          <div class="card-header">
+            <h1 class="all-text-color barberHood-title">Cart</h1>
+          </div>
+          <div class="card-body cart-body">
+            <ul
+              id="shopping-cart-list"
+              class="list-group list-group-flush"
+            ></ul>
+          </div>
+          <div class="card-footer">
+            <h2 id="totalPrice" class="all-text-color"></h2>
+          </div>
         </section>
       </div>
       <div class="row"></div>
