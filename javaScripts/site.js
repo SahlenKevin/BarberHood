@@ -41,7 +41,7 @@ function displayServices()
         card.appendChild(img);
 
         const cardBody = document.createElement("div");
-        cardBody.classList.add("card-body");
+        cardBody.classList.add("card-body", "d-flex", "flex-column", "align-items-center");
         card.appendChild(cardBody);
         
         const title = document.createElement("h5");
@@ -54,8 +54,8 @@ function displayServices()
         price.innerText="Pris: " + service.Price +":-";
         cardBody.appendChild(price);
         
-        const addToCartBtn = document.createElement("button");
-        addToCartBtn.classList.add("btn","btn-success");
+        const addToCartBtn = document.createElement("btn");
+        addToCartBtn.classList.add("btn","btn-success", "mx-auto");
         addToCartBtn.innerText="Boka tjänst";
 
         cardBody.appendChild(addToCartBtn);
