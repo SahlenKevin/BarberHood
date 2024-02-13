@@ -1,17 +1,9 @@
-body {
-    background-color: #22333B;
-}
-
-.about-us-text{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: limegreen;
-}
 
 .about{
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.contact{
-    color: red;
+.API{
+    border: 5px solid #0A0908;
 }
