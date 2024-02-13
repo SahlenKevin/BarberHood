@@ -1,3 +1,22 @@
+body{
+    background-color: #22333B;
+}
+.navbar{
+    background-color: #0A0908;
+}
+
+.nav-text{
+    color: #EAE0D5;
+    font-family:'Times New Roman', Times, serif
+}
+
+.all-text-color{
+    color: #C6AC8F;
+}
+
+.barberHood-title{
+    text-align: center;
+}
 
 h3{
     text-align: center;
@@ -7,17 +26,6 @@ p{
     text-align: center;
 }
 
-.test{
-    text-align: center;
-}
-/* .banner{
-    display: flex;
-    margin: 0;
-    height: 250px;
-    flex-direction: row;
-    justify-content: space-between;
-    
-} */
 
 .bannerimg{
     border-radius: 5%;

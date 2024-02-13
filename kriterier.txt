@@ -12,10 +12,9 @@ Uppdraget innebär ett ta fram ett förslag åt företaget och måste inte inneh
 Bedömning
 Krav för G
 
-Alla delar beskrivna ovan finns med.
+Alla delar beskrivna ovan finns med. [done]
 
-Sidan är uppdelad på ett strukturerat sätt med minst tre HTML- och CSS-filer.
-
+Sidan är uppdelad på ett strukturerat sätt med minst tre HTML- och CSS-filer. [done]
 Det finns en site.js-fil som innehåller funktionaliteten för att:
 
     Visa listan av produkter/tjänster.
@@ -24,15 +23,15 @@ Det finns en site.js-fil som innehåller funktionaliteten för att:
 
 L   Lägga till och ta bort saker ur kundvagnen.
 
-Sidorna uppnår minst 80% i Lighthouse på Best Practices i både Mobile och Desktop.
+Sidorna uppnår minst 80% i Lighthouse på Best Practices i både Mobile och Desktop. [Done]
 
-Hemsidan nyttjar minst två typsnitt.
+Hemsidan nyttjar minst två typsnitt. [Done]
 
-Hemsidan har ett färsgschema med minst 3 färger (utöver vitt och svart).
+Hemsidan har ett färsgschema med minst 3 färger (utöver vitt och svart). [Done]
 
-Man nyttjar Bootstrap (eller liknande css-bibliotek).
+Man nyttjar Bootstrap (eller liknande css-bibliotek). [Done]
 
-På sidan "Om Oss" Ska man kunna se adressen i en inbakad Google Maps-modul.
+På sidan "Om Oss" Ska man kunna se adressen i en inbakad Google Maps-modul. [Done]
 
 
 

@@ -75,7 +75,15 @@ function addServiceToCart(service) {
     // Add the service object to the shopping cart
     const addCartItem = document.createElement("li");
     addCartItem.classList.add("list-group-item");
-    addCartItem.innerText = `Tjänst: ${service.Title}, Pris: ${service.Price}:-`;
+
+    const serviceInfo= document.createElement("p");
+    serviceInfo.innerText=service.Title;
+    addCartItem.appendChild(serviceInfo);
+
+    const priceInfo= document.createElement("p");
+    priceInfo.innerText=`Pris: ${service.Price}:-`;
+    addCartItem.appendChild(priceInfo);
+    // addCartItem.innerText = `Tjänst: ${service.Title}, Pris: ${service.Price}:-`;
 
     const removeButton = document.createElement("btn");
     removeButton.classList.add("btn", "btn-danger")
