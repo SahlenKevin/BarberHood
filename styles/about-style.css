@@ -1,9 +1,13 @@
 .about-us-text{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: bisque;
+    color: limegreen;
 }
 
 .about{
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.contact{
+    color: red;
 }
