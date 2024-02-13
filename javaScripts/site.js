@@ -1,6 +1,17 @@
 const shoppingCart = document.getElementById("shopping-cart-list");
 const addToCartBtn = document.getElementsByClassName("btn-success");
 const serviceList = document.getElementsByClassName("service-list")[0];
+const payBtn = document.getElementById("pay-btn");
+
+payBtn.addEventListener("click", ()=>{
+    
+        while (shoppingCart.firstChild) {
+            shoppingCart.removeChild(shoppingCart.firstChild);
+        }
+
+        totalPrice = 0;
+        updateTotalPrice();
+})
 let totalPrice = 0;
 console.log(addToCartBtn);
 
@@ -111,6 +122,5 @@ function removeServiceFromCart(CartItem, price) {
     updateTotalPrice();
     CartItem.remove();
 }
-
 
 
