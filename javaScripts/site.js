@@ -1,9 +1,7 @@
-const shoppingCart = document.getElementById("shopping-cart-list");
+const shoppingCart = document.getElementById("shoppingCart");
 const addToCartBtn = document.getElementsByClassName("btn-success");
 const serviceList = document.getElementsByClassName("service-list")[0];
 const payBtn = document.getElementById("pay-btn");
-const modalFuck = document.getElementById("modal");
-const API = document.getElementById("API");
 
 let totalPrice = 0;
 
@@ -21,21 +19,21 @@ payBtn.addEventListener("click", ()=>{
 const services = [
     {
         id: "0",
-        img: "../images/barber.jpg",
+        img: "../images/barber.WebP",
         Title: "Skägg",
         Description: "Skäggvård i världsklass",
         Price: 199
     },
     {
         id: "1",
-        img: "../images/beardthree.jpg",
+        img: "../images/beardthree.WebP",
         Title: "Skägg++",
         Description: "Skäggvård i världsklass + styling",
         Price: 299
     },
     {
         id: "2",
-        img: "../images/beardandhair.jpg",
+        img: "../images/beardandhair.WebP",
         Title: "Total",
         Description: "Skäggvård i världsklass + styling + Hårvård i världsklass!",
         Price: 399
@@ -60,7 +58,7 @@ function displayServices()
         card.appendChild(img);
 
         const cardBody = document.createElement("div");
-        cardBody.classList.add("card-body", "d-flex", "flex-column", "align-items-center");
+        cardBody.classList.add("card-body", "d-flex", "flex-column");
         card.appendChild(cardBody);
         
         const title = document.createElement("h5");
