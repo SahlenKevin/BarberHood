@@ -33,7 +33,7 @@ const services = [
     },
     {
         id: "2",
-        img: "../images/beardandhair.WebP",
+        img: "../images/beardhair.WebP",
         Title: "Total",
         Description: "Skäggvård i världsklass + styling + Hårvård i världsklass!",
         Price: 399
