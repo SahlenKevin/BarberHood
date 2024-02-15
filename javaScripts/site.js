@@ -27,16 +27,16 @@ const services = [
     },
     {
         id: "1",
-        img: "../images/barber.jpg",
-        Title: "Skägg + hår",
-        Description: "Skäggvård i bajs + att vi fixar håret på toppen också!",
+        img: "../images/beardthree.jpg",
+        Title: "Skägg++",
+        Description: "Skäggvård i världsklass + styling",
         Price: 299
     },
     {
         id: "2",
-        img: "../images/beardtwo.jpg",
-        Title: "Skägg + hår",
-        Description: "Skäggvård i kiss + att vi fixar håret på toppen också!",
+        img: "../images/beardandhair.jpg",
+        Title: "Total",
+        Description: "Skäggvård i världsklass + styling + Hårvård i världsklass!",
         Price: 399
     }
 ]
@@ -54,6 +54,7 @@ function displayServices()
         const img = document.createElement("img");
         img.classList.add("card-img-top");
         img.src=service.img;
+        img.setAttribute("loading","lazy");
         img.alt="Pic of beard"
         card.appendChild(img);
 
