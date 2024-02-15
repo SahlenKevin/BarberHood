@@ -56,6 +56,7 @@ function displayServices()
         const img = document.createElement("img");
         img.classList.add("card-img-top");
         img.src=service.img;
+        img.alt="Pic of beard"
         card.appendChild(img);
 
         const cardBody = document.createElement("div");
@@ -73,7 +74,7 @@ function displayServices()
         cardBody.appendChild(price);
         
         const addToCartBtn = document.createElement("btn");
-        addToCartBtn.classList.add("btn","btn-success", "mx-auto");
+        addToCartBtn.classList.add("btn","btn-success");
         addToCartBtn.innerText="Boka tjänst";
         cardBody.appendChild(addToCartBtn);
         
