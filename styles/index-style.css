@@ -5,6 +5,9 @@ body{
     background-color: #0A0908;
 }
 
+.mainBGColor{
+    background-color: #22333B;
+}
 .nav-text{
     color: #EAE0D5;
     font-family:'Times New Roman', Times, serif
