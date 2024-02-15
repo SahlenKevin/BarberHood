@@ -47,8 +47,6 @@ displayServices();
 function displayServices()
 {
     for (const service of services) {
-        // createInfoModal(service);
-
         //#region Card
         const card = document.createElement("div");
         card.classList.add("card");
