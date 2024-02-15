@@ -2,6 +2,9 @@ const shoppingCart = document.getElementById("shopping-cart-list");
 const addToCartBtn = document.getElementsByClassName("btn-success");
 const serviceList = document.getElementsByClassName("service-list")[0];
 const payBtn = document.getElementById("pay-btn");
+const modalFuck = document.getElementById("modal");
+
+let totalPrice = 0;
 
 payBtn.addEventListener("click", ()=>{
     
@@ -12,37 +15,41 @@ payBtn.addEventListener("click", ()=>{
         totalPrice = 0;
         updateTotalPrice();
 })
-let totalPrice = 0;
-console.log(addToCartBtn);
+
 
 const services = [
     {
+        id: "0",
         img: "../images/barber.jpg",
         Title: "Skägg",
         Description: "Skäggvård i världsklass",
         Price: 199
     },
     {
+        id: "1",
         img: "../images/barber.jpg",
         Title: "Skägg + hår",
-        Description: "Skäggvård i världsklass + att vi fixar håret på toppen också!",
+        Description: "Skäggvård i bajs + att vi fixar håret på toppen också!",
         Price: 299
     },
     {
+        id: "2",
         img: "../images/beardtwo.jpg",
         Title: "Skägg + hår",
-        Description: "Skäggvård i världsklass + att vi fixar håret på toppen också!",
+        Description: "Skäggvård i kiss + att vi fixar håret på toppen också!",
         Price: 399
     }
 ]
 
-console.log(services);
 
 displayServices();
 
 function displayServices()
 {
     for (const service of services) {
+        // createInfoModal(service);
+
+        //#region Card
         const card = document.createElement("div");
         card.classList.add("card");
 
@@ -68,16 +75,24 @@ function displayServices()
         const addToCartBtn = document.createElement("btn");
         addToCartBtn.classList.add("btn","btn-success", "mx-auto");
         addToCartBtn.innerText="Boka tjänst";
-
         cardBody.appendChild(addToCartBtn);
+        
+        const openModalBtn = document.createElement("btn");
+        openModalBtn.setAttribute("type", "btn");
+        openModalBtn.innerText = "Info";
+        openModalBtn.classList.add("btn", "btn-primary");
+        openModalBtn.setAttribute("data-bs-toggle", "modal");
+        openModalBtn.setAttribute("data-bs-target", `#modal`);
+        openModalBtn.addEventListener("click", function() {
+            const mhm = document.getElementById("infoDiv");
+            mhm.innerText=service.Description;
+        });
+        cardBody.appendChild(openModalBtn);
 
-        const description = document.createElement("p");
-        description.classList.add("card-text");
-        description.innerText=service.Description;
-        addToCartBtn.addEventListener("click", function () {
+        addToCartBtn.addEventListener("click", function() {
             addServiceToCart(service);
         });
-        cardBody.appendChild(description);
+        //#endregion
 
         serviceList.appendChild(card);
     }
