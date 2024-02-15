@@ -1,7 +1,7 @@
  
  const API = document.getElementById("API");
  
- async function fetchRandomQuote() {
+ async function fetchTrumpQuote() {
 
     const apiUrl = 'https://www.tronalddump.io/random/quote';
     const response = await fetch(apiUrl);
@@ -9,10 +9,10 @@
     return result.value;
 }
 
-async function fetchAndSetRandomQuote() {
+async function displayTrumpQuote() {
 
-    const quote = await fetchRandomQuote();
+    const quote = await fetchTrumpQuote();
     API.innerText = quote;
 }
 
-fetchAndSetRandomQuote();
+displayTrumpQuote();
