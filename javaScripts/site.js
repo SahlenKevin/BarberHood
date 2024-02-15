@@ -3,6 +3,7 @@ const addToCartBtn = document.getElementsByClassName("btn-success");
 const serviceList = document.getElementsByClassName("service-list")[0];
 const payBtn = document.getElementById("pay-btn");
 const modalFuck = document.getElementById("modal");
+const API = document.getElementById("API");
 
 let totalPrice = 0;
 
